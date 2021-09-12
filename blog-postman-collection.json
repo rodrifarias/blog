@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "c68d5320-d05f-40dd-a048-0824bd54820a",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"teste@teste.com.br\",\n    \"password\": \"abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/auth",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Show User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/users/e81d9a9e-c670-4fc7-9ae2-41bf716b8408",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"users",
+								"e81d9a9e-c670-4fc7-9ae2-41bf716b8408"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/users",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"teste dffdd\",\n    \"email\": \"teste@testde.com.br\",\n    \"password\": \"abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/users",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Diguinho Farias\",\n    \"email\": \"teste@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/users/0f2f8b86-af68-4c5c-9976-aee68926dcd7",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"users",
+								"0f2f8b86-af68-4c5c-9976-aee68926dcd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/users/90c5b0fa-0007-4b37-87ac-33007252812c",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"users",
+								"90c5b0fa-0007-4b37-87ac-33007252812c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"TITLE POST GG\",\n    \"content\": \"CONTENT POST\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/posts",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/posts",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/posts/fef53487-0d90-48d9-be5e-7dcfdd5e2b48",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"posts",
+								"fef53487-0d90-48d9-be5e-7dcfdd5e2b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/posts/fef53487-0d90-48d9-be5e-7dcfdd5e2b48",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"posts",
+								"fef53487-0d90-48d9-be5e-7dcfdd5e2b48"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"PHP, THE BEST\",\n    \"content\": \"CONTENT POST\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/posts/217f397d-00e0-487c-a9b6-6f70811b241c",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"posts",
+								"217f397d-00e0-487c-a9b6-6f70811b241c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_api",
+			"value": ""
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
